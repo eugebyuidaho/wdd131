@@ -1,0 +1,93 @@
+:root {
+    --bg: #f5efe6;
+    --surface: #ffffff;
+    --accent: #8fa89a;
+    --accent2: #f3d6d9;
+    --text: #2f2f2f;
+    --border: #ddd6cc;
+
+    --heading-font: "Poppins", sans-serif;
+    --body-font: "Inter", sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+course-title {
+    display: block;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background: var(--accent2);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    outline: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+@media (min-width: 700px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
