@@ -66,14 +66,6 @@ nav a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a {
-    display: none;
-    color: var(--white);
-    text-decoration: none;
-    padding: 0.75rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 nav a:hover {
     background-color: var(--accent-color);
     color: var(--text-color);
