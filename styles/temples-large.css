@@ -3,24 +3,15 @@
         display: none;
     }
 
-    .navigation {
+    nav {
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         gap: 1rem;
     }
 
-    .navigation a {
+    nav a {
         display: block;
-    }
-
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    header h1 {
-        margin-bottom: 0;
+        flex: 1 1 auto;
     }
 
     .gallery {
