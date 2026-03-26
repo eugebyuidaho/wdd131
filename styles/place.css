@@ -22,7 +22,7 @@ body {
 
 header, footer {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--dark-color);
     text-align: center;
     padding: 1rem;
 }
