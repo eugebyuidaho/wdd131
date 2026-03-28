@@ -6,10 +6,12 @@
 
 :root {
     --primary-color: #2d4f6c;
-    --secondary-color: #f4f1ea;
+    --secondary-color: #e8e4dd;
     --accent-color: #d9a441;
     --text-color: #222222;
     --white: #ffffff;
+    --card-bg: #efefef;
+    --card-border: #d3d3d3;
 }
 
 body {
@@ -29,7 +31,8 @@ header {
 header span {
     display: block;
     font-family: 'Roboto Slab', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
@@ -49,12 +52,15 @@ header span {
 }
 
 #menu.open::before {
-    content: "X";
+    content: "✖";
 }
 
 nav {
     display: flex;
     flex-direction: column;
+}
+
+.navigation {
     list-style: none;
 }
 
@@ -63,6 +69,7 @@ nav a {
     color: var(--white);
     text-decoration: none;
     padding: 0.75rem;
+    font-weight: 700;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -76,16 +83,17 @@ nav a:hover {
 }
 
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
 }
 
 main h1 {
     font-family: 'Roboto Slab', serif;
     text-align: center;
-    margin: 1rem 0 1.5rem;
+    margin: 1rem 0 2rem;
     color: var(--primary-color);
+    font-size: 3rem;
 }
 
 .gallery {
@@ -94,24 +102,40 @@ main h1 {
     gap: 1.5rem;
 }
 
-figure {
-    background-color: var(--white);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.gallery section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 1.5rem;
     text-align: center;
+    overflow: hidden;
 }
 
-figure img {
+.gallery h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.gallery p {
+    margin: 0.15rem 0;
+    font-size: 1.05rem;
+}
+
+.gallery p strong {
+    color: #5b2c83;
+    font-variant: small-caps;
+    letter-spacing: 0.5px;
+}
+
+.gallery img {
+    display: block;
     width: 100%;
+    max-width: 400px;
     height: auto;
-    border-radius: 6px;
-}
-
-figcaption {
-    margin-top: 0.75rem;
-    font-weight: 500;
-    color: var(--primary-color);
+    margin: 1.25rem auto 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 footer {
@@ -124,4 +148,35 @@ footer {
 
 footer p {
     margin: 0.3rem 0;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #menu {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
