@@ -58,7 +58,7 @@ legend {
 
 label span,
 legend span {
-  color: var(--optional);
+  color: #0b1f5e;
   font-weight: 400;
   font-style: italic;
 }
