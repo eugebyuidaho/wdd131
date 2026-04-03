@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary-color: #2d4f6c;
+    --primary-color: #163042;
     --secondary-color: #f4f1ea;
     --accent-color: #d9a441;
     --text-color: #222222;
@@ -104,7 +104,8 @@ h3 {
 .navigation a:hover,
 .navigation a.active,
 footer a:hover {
-    color: var(--accent-color);
+    color: var(--white);
+    text-decoration: underline;
 }
 
 main {
@@ -126,7 +127,7 @@ main {
 }
 
 .hero-text {
-    background-color: rgba(45, 79, 108, 0.88);
+    background-color: var(--primary-color);
     color: var(--white);
     padding: 1.25rem;
 }
@@ -203,8 +204,8 @@ input[type="submit"] {
 
 .button-group button:hover,
 input[type="submit"]:hover {
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    background-color: #0f2431;
+    color: var(--white);
 }
 
 form {
