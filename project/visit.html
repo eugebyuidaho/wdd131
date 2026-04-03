@@ -47,14 +47,19 @@
         <section class="content-grid">
             <article class="card">
                 <h2>Location</h2>
-                <p>Ateneo Grand Splendid is located in Avenida Santa Fe 1860 (vereda sur) in the Recoleta neighborhood, Buenos Aires, Argentina, and is a popular destination for tourists and local visitors.</p>
+                <p>
+                    Ateneo Grand Splendid is located in Avenida Santa Fe 1860 (vereda sur) in the
+                    Recoleta neighborhood, Buenos Aires, Argentina, and is a popular destination
+                    for tourists and local visitors.
+                </p>
             </article>
 
             <article class="card">
                 <h2>Visitor Information</h2>
                 <p>
-                    Visitors can explore the bookstore, enjoy its architecture, browse a wide selection of books,
-                    and relax in the café area. It is a place for reading, photography, and cultural appreciation.
+                    Visitors can explore the bookstore, enjoy its architecture, browse a wide selection
+                    of books, and relax in the café area. It is a place for reading, photography,
+                    and cultural appreciation.
                 </p>
             </article>
 
@@ -66,7 +71,8 @@
 
         <section class="card form-card">
             <h2>Visit Interest Form</h2>
-            <form method="get" action="visit.html">
+
+            <form method="get" action="review.html">
                 <fieldset>
                     <legend>Your Information</legend>
 
@@ -78,6 +84,9 @@
 
                     <label for="country">Country</label>
                     <input type="text" id="country" name="country" required>
+
+                    <label for="visit-date">Preferred Visit Date</label>
+                    <input type="date" id="visit-date" name="visit-date" required>
                 </fieldset>
 
                 <fieldset>
@@ -86,32 +95,84 @@
                     <label for="interest">What interests you most?</label>
                     <select id="interest" name="interest" required>
                         <option value="" disabled selected>Select an option ...</option>
-                        <option value="History">History</option>
-                        <option value="Architecture">Architecture</option>
-                        <option value="Books">Books</option>
-                        <option value="Photography">Photography</option>
+                        <option value="history">History</option>
+                        <option value="architecture">Architecture</option>
+                        <option value="books">Books</option>
+                        <option value="photography">Photography</option>
                     </select>
 
                     <label for="day">Preferred Day to Visit</label>
                     <select id="day" name="day" required>
                         <option value="" disabled selected>Select a day ...</option>
-                        <option value="Monday">Monday</option>
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Wednesday">Wednesday</option>
-                        <option value="Thursday">Thursday</option>
-                        <option value="Friday">Friday</option>
-                        <option value="Saturday">Saturday</option>
-                        <option value="Sunday">Sunday</option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="sunday">Sunday</option>
                     </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interest Level</legend>
+
+                    <label for="rating-1">
+                        <input type="radio" id="rating-1" name="rating" value="1" required>
+                        1 - Very Low
+                    </label>
+
+                    <label for="rating-2">
+                        <input type="radio" id="rating-2" name="rating" value="2">
+                        2 - Low
+                    </label>
+
+                    <label for="rating-3">
+                        <input type="radio" id="rating-3" name="rating" value="3">
+                        3 - Medium
+                    </label>
+
+                    <label for="rating-4">
+                        <input type="radio" id="rating-4" name="rating" value="4">
+                        4 - High
+                    </label>
+
+                    <label for="rating-5">
+                        <input type="radio" id="rating-5" name="rating" value="5">
+                        5 - Very High
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What would you like to explore?</legend>
+
+                    <label for="feature-balconies">
+                        <input type="checkbox" id="feature-balconies" name="features" value="balconies">
+                        The balconies
+                    </label>
+
+                    <label for="feature-ceiling">
+                        <input type="checkbox" id="feature-ceiling" name="features" value="painted-ceiling">
+                        The painted ceiling
+                    </label>
+
+                    <label for="feature-cafe">
+                        <input type="checkbox" id="feature-cafe" name="features" value="cafe-stage">
+                        The café area
+                    </label>
+
+                    <label for="feature-books">
+                        <input type="checkbox" id="feature-books" name="features" value="book-collection">
+                        The book collection
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Comments</legend>
 
                     <label for="comments">Comments</label>
                     <textarea id="comments" name="comments" rows="5"></textarea>
                 </fieldset>
-
-                <label class="checkbox-label">
-                    <input type="checkbox" id="updates" name="updates" value="yes">
-                    I would like to receive travel and cultural updates.
-                </label>
 
                 <input type="submit" value="Submit Visit Interest">
             </form>
