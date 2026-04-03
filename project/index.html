@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateneo Grand Splendid | Home</title>
+    <meta name="description" content="Discover Ateneo Grand Splendid, the famous bookstore in Buenos Aires, Argentina. Learn about its beauty, history, and visitor information.">
+    <meta name="author" content="Eugenia Schulz">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="site-header">
+            <div class="logo">
+                <span class="logo-icon">⚜️</span>
+                <div>
+                    <h1>Ateneo Grand Splendid</h1>
+                    <p class="tagline">A cultural jewel in Buenos Aires</p>
+                </div>
+            </div>
+
+            <button id="menu" aria-label="Open navigation"></button>
+
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="visit.html">Visit</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero.webp" alt="Interior view of Ateneo Grand Splendid bookstore in Buenos Aires" width="1200" height="700">
+            <div class="hero-text">
+                <h2>One of the most beautiful bookstores in the world</h2>
+                <p>
+                    Ateneo Grand Splendid is a famous bookstore in Buenos Aires, Argentina,
+                    admired for its grand theater architecture, elegant balconies, painted ceiling,
+                    and unique atmosphere.
+                </p>
+                <a class="button" href="visit.html">Plan Your Visit</a>
+            </div>
+        </section>
+
+        <section class="cards-grid">
+            <article class="card">
+                <h2>Why It Is Famous</h2>
+                <p>
+                    This bookstore is internationally recognized because it transformed a historic theater
+                    into a literary and cultural space without losing its original beauty and character.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Architecture</h2>
+                <p>
+                    Visitors can enjoy ornate balconies, decorative details, red stage curtains,
+                    and a remarkable painted ceiling that preserve the spirit of the original theater.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Visitor Experience</h2>
+                <p>
+                    Guests can browse books, admire the interior, take photographs, and enjoy the café
+                    located in the former stage area.
+                </p>
+            </article>
+        </section>
+
+        <section class="info-section">
+            <div class="card">
+                <h2>Featured Highlights</h2>
+                <ul id="highlight-list"></ul>
+            </div>
+
+            <div class="card">
+                <h2>Today’s Hours</h2>
+                <p id="hours-message">Loading today’s schedule...</p>
+            </div>
+        </section>
+
+        <section class="card favorite-section">
+            <h2>Choose Your Favorite Feature</h2>
+            <p>Select your favorite part of Ateneo Grand Splendid and save it.</p>
+
+            <div class="button-group">
+                <button class="favorite-btn" data-feature="The painted ceiling">Painted Ceiling</button>
+                <button class="favorite-btn" data-feature="The balconies">Balconies</button>
+                <button class="favorite-btn" data-feature="The stage café">Stage Café</button>
+                <button class="favorite-btn" data-feature="The theater atmosphere">Theater Atmosphere</button>
+            </div>
+
+            <p id="favorite-message">You have not selected a favorite feature yet.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Eugenia Schulz | WDD 131 Final Project</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

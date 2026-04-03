@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateneo Grand Splendid | Visit</title>
+    <meta name="description" content="Find visitor information for Ateneo Grand Splendid, including location, visiting details, and a form to plan your visit.">
+    <meta name="author" content="Eugenia Schulz">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="site-header">
+            <div class="logo">
+                <span class="logo-icon">⚜️</span>
+                <div>
+                    <h1>Ateneo Grand Splendid</h1>
+                    <p class="tagline">A cultural jewel in Buenos Aires</p>
+                </div>
+            </div>
+
+            <button id="menu" aria-label="Open navigation"></button>
+
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="visit.html" class="active">Visit</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-banner">
+            <h2>Plan Your Visit</h2>
+            <p>Find helpful information before visiting Ateneo Grand Splendid in Buenos Aires.</p>
+        </section>
+
+        <section class="content-grid">
+            <article class="card">
+                <h2>Location</h2>
+                <p>Ateneo Grand Splendid is located in Buenos Aires, Argentina, and is a popular destination for tourists and local visitors.</p>
+            </article>
+
+            <article class="card">
+                <h2>Visitor Information</h2>
+                <p>
+                    Visitors can explore the bookstore, enjoy its architecture, browse a wide selection of books,
+                    and relax in the café area. It is a place for reading, photography, and cultural appreciation.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Hours Reminder</h2>
+                <p id="visit-hours-message">Loading today’s schedule...</p>
+            </article>
+        </section>
+
+        <section class="card form-card">
+            <h2>Visit Interest Form</h2>
+            <form method="get" action="visit.html">
+                <fieldset>
+                    <legend>Your Information</legend>
+
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Visit Preferences</legend>
+
+                    <label for="interest">What interests you most?</label>
+                    <select id="interest" name="interest" required>
+                        <option value="" disabled selected>Select an option ...</option>
+                        <option value="History">History</option>
+                        <option value="Architecture">Architecture</option>
+                        <option value="Books">Books</option>
+                        <option value="Photography">Photography</option>
+                    </select>
+
+                    <label for="day">Preferred Day to Visit</label>
+                    <select id="day" name="day" required>
+                        <option value="" disabled selected>Select a day ...</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="5"></textarea>
+                </fieldset>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="updates" name="updates" value="yes">
+                    I would like to receive travel and cultural updates.
+                </label>
+
+                <input type="submit" value="Submit Visit Interest">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Eugenia Schulz | WDD 131 Final Project</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
